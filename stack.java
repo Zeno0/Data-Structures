@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class stack {
     static Scanner scan = new Scanner(System.in);
-    int max;
+  static  int max;
     char[] arr;  // array where data is saved
     int top;
     
@@ -26,7 +26,13 @@ public class stack {
     }
     // push method 
      public void push(char j){
-         arr[++top]=j; // top index is set 
+        
+         if(isfull()){
+             System.out.println("OverFlow, please try again ");
+         }
+         else{
+            arr[++top]=j; // top index is set 
+         }
      }
      // pop method
     public char pop(){
@@ -90,7 +96,7 @@ public class stack {
            System.out.println("Choose options: ");
            System.out.println("1: for String stack ");
            System.out.println("2: for normal character stack ");
-           System.out.println("3: for close");
+           System.out.println("3: for exit");
           
         
             c = scan.nextInt(); // option entered
@@ -107,7 +113,7 @@ public class stack {
               
         boolean flag = true;
         int size=0;
-        stack stack2 = null;
+        stack stack2 = new stack();
         while(flag){  // 2nd while
             int x=0;
             // optioms
@@ -117,7 +123,7 @@ public class stack {
             System.out.println("3: for pop ");
             System.out.println("4: for peek at any index of stack ");
             System.out.println("5: for display");
-            System.out.println("6: for exit ");
+            System.out.println("6: to go back ");
             
              x = scan.nextInt();
            
@@ -131,22 +137,50 @@ public class stack {
                 System.out.println("Enter the character you want to enter ");
                 String str = scan.next();
                 char val2 = str.charAt(0);
-                stack2.push(val2);
+                if(max==0){
+                 System.out.println("Set size first");
+                }
+                else if(max!=0) {stack2.push(val2);
                 System.out.println("you pushed: "+val2);
+                }
+                else if(stack2.isfull()){
+                System.out.println("can't enter the value: "+val2);
+                }
                 break;
 
                 case 3 :
-                 System.out.println("Popped value is "+stack2.pop());
+                
+                 if(max==0){
+                    System.out.println("Set size first");
+                   }
+                   else if(stack2.isempty()){
+                       System.out.println("Push values in stack");
+                   }
+                   else if(max!=0) {
+                    System.out.println("Popped value is "+stack2.pop());
+                   }
                  break;
                 
                 case 4 :
-                 System.out.println("Enter the index of element you want to inquire about ");
-                 int i = scan.nextInt();
-                 System.out.println("Value peeked at "+i+" is "+stack2.peekn(i));
+                
+                 if(max==0){
+                    System.out.println("Set size first");
+                   }
+                   else if(max!=0) {
+                    System.out.println("Enter the index of element you want to inquire about ");
+                    int i = scan.nextInt();
+                    System.out.println("Value peeked at "+i+" is "+stack2.peekn(i));
+                   }
                  break;
 
                 case 5 :
-                 stack2.display("stack2 ");
+                
+                 if(max==0){
+                    System.out.println("Set size first");
+                   }
+                   else if(max!=0) {
+                    stack2.display("stack2 ");
+                   }
                  break;
                 
                 case 6 :

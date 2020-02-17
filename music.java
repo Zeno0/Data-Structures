@@ -3,7 +3,7 @@ import java.util.*;
 public class music{
     
     ArrayList<song> songlist = new ArrayList<song>(); // list where songs will be saved
-    ArrayList<song> artistlist = new ArrayList<song>();
+  
 
     class artistcompare implements Comparator<song>{  // artistcompare class implements Comparator and
                                                       // overrrides the compare method.
