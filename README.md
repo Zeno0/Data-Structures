@@ -14,3 +14,19 @@ Basic data structures in java
    returns title.
   ### getArtist() method 
    returns artist.
+  ## class music 
+   It uses data structure ArrayList
+  ### inner class artistcompare
+    It implements Comparator and gets result by comparing the artist of song.
+  ### getsongs() method
+    It reades songs from a .txt file and invokes addsongs method.
+  ### addsongs(String) method
+    It adds song to the Arraylist.
+  ### go() method
+    It invokes getsongs method.
+    It sorts the ArrayList.
+    It tells about using HashSet. It prevents duplicacy in title of songs but doesnt prevents sort order. Therfore TreeSet is used. It can do everything.
+
+# Source 
+For music.java and song.java 
+--- Head First Java By O'reilly---
