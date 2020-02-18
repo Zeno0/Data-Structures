@@ -32,6 +32,7 @@ public class stack {
          }
          else{
             arr[++top]=j; // top index is set 
+            System.out.println("you pushed: "+j);
          }
      }
      // pop method
@@ -141,11 +142,12 @@ public class stack {
                  System.out.println("Set size first");
                 }
                 else if(max!=0) {stack2.push(val2);
-                System.out.println("you pushed: "+val2);
+                    
                 }
                 else if(stack2.isfull()){
                 System.out.println("can't enter the value: "+val2);
                 }
+               
                 break;
 
                 case 3 :
