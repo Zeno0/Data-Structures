@@ -26,6 +26,23 @@ Basic data structures in java
     It invokes getsongs method.
     It sorts the ArrayList.
     It tells about using HashSet. It prevents duplicacy in title of songs but doesnt prevents sort order. Therfore TreeSet is used. It can do everything.
+  ## class stack
+   It implements a basic stack with the help of an Array. It has Two options. First, in which a String is entered by user and second, where full stack is used by the user. It contains two Constructors. 
+  ### push(char) method
+   it pushes the vlaue in stack.
+  ### pop() method
+   It pops the value in stack.
+  ### isempty() method
+   It returns true if the stack is empty.
+  ### isfull() method
+   It returns true if the stack is full.
+  ### peekn(int) method
+   It returns the data at the asked index.
+  ### size() method
+   It returns the number of elements in stack.
+  ### display() method
+   It prints the data in stack.
+
 
 # Source 
 For music.java and song.java 
