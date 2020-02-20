@@ -43,6 +43,14 @@ Basic data structures in java
   ### display() method
    It prints the data in stack.
 
+  ## class insertionsort
+   ### display() method
+   It prints the array.
+   ### sort() method
+   It checks every element of array and compares the elements to invoke swap method accordingly.
+   ### swap(int,int) method
+   It switches the elements.
+
 
 # Source 
 For music.java and song.java 
